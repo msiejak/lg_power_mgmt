@@ -4,7 +4,7 @@ use lg_power_mgmt::Control;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    if args.len() == 1 {
+    if args.len() != 2 {
         panic!("options are:\n\npoweron\nshutdown")
     }
     match &args[1][..] {
